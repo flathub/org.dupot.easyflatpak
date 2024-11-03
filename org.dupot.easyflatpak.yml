@@ -34,5 +34,5 @@ modules:
       - type: git
         dest: git_repo
         url: https://github.com/imikado/dupotEasyFlatpak
-        tag: 2.14.1
-        commit: 2943b2b83085b1b0d126eb4b638ba42a139e8ff3
+        tag: 2.14.2
+        commit: 9bca3db276065934fa5f3ad17e2ba42d2a05d047
