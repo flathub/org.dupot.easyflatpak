@@ -29,8 +29,8 @@ modules:
     sources:
       - type: archive
         dest: EasyFlatpakArchive
-        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/2.16.0/bundle.tar.gz
-        sha256: a3edad8916aabd03494c98557c198fc62fc1ea1c24e5e709759d68c6aa42e79a
+        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/2.16.1/bundle.tar.gz
+        sha256: 7997b53f562c2401d0e4d82e5a8ea6c53485fc1770c27cc415752553a8fcf60d
       - type: git
         dest: git_repo
         url: https://github.com/imikado/dupotEasyFlatpak
