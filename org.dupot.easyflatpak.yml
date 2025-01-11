@@ -21,7 +21,12 @@ modules:
       - mkdir /app/bin/
       - ln -s /app/EasyFlatpak/dupot_easy_flatpak /app/bin/dupot_easy_flatpak
       - install -Dm644 git_repo/export/flatpak/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
-      - install -Dm644 git_repo/export/flatpak/512x512.png /app/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
+      - install -Dm644 git_repo/export/flatpak/16x16.png $FLATPAK_DEST/share/icons/hicolor/16x16/apps/org.dupot.beatmatchtopass.png
+      - install -Dm644 git_repo/export/flatpak/24x24.png $FLATPAK_DEST/share/icons/hicolor/24x24/apps/org.dupot.beatmatchtopass.png
+      - install -Dm644 git_repo/export/flatpak/32x32.png $FLATPAK_DEST/share/icons/hicolor/32x32/apps/org.dupot.beatmatchtopass.png
+      - install -Dm644 git_repo/export/flatpak/48x48.png $FLATPAK_DEST/share/icons/hicolor/48x48/apps/org.dupot.beatmatchtopass.png
+      - install -Dm644 git_repo/export/flatpak/64x64.png $FLATPAK_DEST/share/icons/hicolor/64x64/apps/org.dupot.beatmatchtopass.png
+      - install -Dm644 git_repo/export/flatpak/512x512.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
       - install -Dm644 git_repo/export/flatpak/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - mkdir /app/lib/
       - ln -s /usr/lib/x86_64-linux-gnu/libsqlite3.so.0 /app/lib/libsqlite3.so
@@ -29,10 +34,10 @@ modules:
     sources:
       - type: archive
         dest: EasyFlatpakArchive
-        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.2.2/bundle.tar.gz
-        sha256: 188bd690409997a980057c629d98e166fe6968648779bfa67056a4c0cea83319
+        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.2.4/bundle.tar.gz
+        sha256: 441f49ed27d77b097aaa8e268356fefea0ac08439321434573a09b9d5f7a0351
       - type: git
         dest: git_repo
         url: https://github.com/imikado/dupotEasyFlatpak
-        tag: 3.2.2
-        commit: 1ae84559494790926dcd1a3ffb043d813bf7c8d7
+        tag: 3.2.4
+        commit: f7aad229d65f26dde7f36c2539e23e36520e3c67
