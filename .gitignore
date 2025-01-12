@@ -1,5 +1,4 @@
 repo/
 .flatpak-builder/
 bundle/
-build.sh
 checkManifest.sh
