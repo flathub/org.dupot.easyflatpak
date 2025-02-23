@@ -34,10 +34,10 @@ modules:
     sources:
       - type: archive
         dest: EasyFlatpakArchive
-        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.6.1/bundle.tar.gz
-        sha256: e00ed63b336e8d51c3f886ffe708e206c3edb60a708c92b1b16e6f52428f3c04
+        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.6.2/bundle.tar.gz
+        sha256: 8a651a188ac69b9fc2e920a468b0fc48e7b0c53344d6bb8f28c21a8b5671d3f3
       - type: git
         dest: git_repo
         url: https://github.com/imikado/dupotEasyFlatpak
-        tag: 3.6.1
-        commit: 2819a7068d0d33cad3bc219d8b5f67d16afe5267
+        tag: 3.6.2
+        commit: bde2eeaed97ff36c0a1de68b44f908dd4c4a8201
