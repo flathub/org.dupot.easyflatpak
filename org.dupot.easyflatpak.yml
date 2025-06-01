@@ -9,7 +9,7 @@ finish-args:
   - --share=ipc
   - --device=dri
   - --talk-name=org.freedesktop.Flatpak
-  - --filesystem=xdg-documents
+  - --filesystem=home
   - --share=network
 
 modules:
@@ -34,10 +34,10 @@ modules:
     sources:
       - type: archive
         dest: EasyFlatpakArchive
-        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.14.1/bundle.tar.gz
-        sha256: 2603037c868bbe223d602238a97853dff6b2112468be7ee0e0bdd20c6c178227
+        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.16.1/bundle.tar.gz
+        sha256: d99e12d0360f2bdd088841ee886be81074da09d348e7430e7570e947ee0e1d70
       - type: git
         dest: git_repo
         url: https://github.com/imikado/dupotEasyFlatpak
-        tag: 3.14.1
-        commit: 2a87230a1d65db2c4a61830c919a7654b553da28
+        tag: 3.16.1
+        commit: 8e931c435145c818ab4939b1a012d57874096895
