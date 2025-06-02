@@ -9,8 +9,6 @@ finish-args:
   - --share=ipc
   - --device=dri
   - --talk-name=org.freedesktop.Flatpak
-  - --filesystem=xdg-data:rw
-  - --filesystem=xdg-config:rw
   - --share=network
 
 modules:
