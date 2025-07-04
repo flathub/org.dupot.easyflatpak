@@ -40,3 +40,4 @@ modules:
         url: https://github.com/imikado/dupotEasyFlatpak
         tag: 3.19.2
         commit: fba16282fdedd4aba66b56c51f0c9709100a987b
+      
