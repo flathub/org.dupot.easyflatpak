@@ -20,11 +20,11 @@ modules:
       - mkdir /app/bin/
       - ln -s /app/EasyFlatpak/dupot_easy_flatpak /app/bin/dupot_easy_flatpak
       - install -Dm644 git_repo/export/flatpak/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
-      - install -Dm644 git_repo/export/flatpak/16x16.png $FLATPAK_DEST/share/icons/hicolor/16x16/apps/org.dupot.beatmatchtopass.png
-      - install -Dm644 git_repo/export/flatpak/24x24.png $FLATPAK_DEST/share/icons/hicolor/24x24/apps/org.dupot.beatmatchtopass.png
-      - install -Dm644 git_repo/export/flatpak/32x32.png $FLATPAK_DEST/share/icons/hicolor/32x32/apps/org.dupot.beatmatchtopass.png
-      - install -Dm644 git_repo/export/flatpak/48x48.png $FLATPAK_DEST/share/icons/hicolor/48x48/apps/org.dupot.beatmatchtopass.png
-      - install -Dm644 git_repo/export/flatpak/64x64.png $FLATPAK_DEST/share/icons/hicolor/64x64/apps/org.dupot.beatmatchtopass.png
+      - install -Dm644 git_repo/export/flatpak/16x16.png $FLATPAK_DEST/share/icons/hicolor/16x16/apps/org.dupot.easyflatpak.png
+      - install -Dm644 git_repo/export/flatpak/24x24.png $FLATPAK_DEST/share/icons/hicolor/24x24/apps/org.dupot.easyflatpak.png
+      - install -Dm644 git_repo/export/flatpak/32x32.png $FLATPAK_DEST/share/icons/hicolor/32x32/apps/org.dupot.easyflatpak.png
+      - install -Dm644 git_repo/export/flatpak/48x48.png $FLATPAK_DEST/share/icons/hicolor/48x48/apps/org.dupot.easyflatpak.png
+      - install -Dm644 git_repo/export/flatpak/64x64.png $FLATPAK_DEST/share/icons/hicolor/64x64/apps/org.dupot.easyflatpak.png
       - install -Dm644 git_repo/export/flatpak/512x512.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
       - install -Dm644 git_repo/export/flatpak/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - mkdir /app/lib/
@@ -33,11 +33,11 @@ modules:
     sources:
       - type: archive
         dest: EasyFlatpakArchive
-        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.23.0/bundle.tar.gz
-        sha256: 4285dda367d6df7dc0a69a77cda47e46ed32f07d5847297022307db27a310a90
+        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.23.1/bundle.tar.gz
+        sha256: a5846cc9614669b8d1597924ba80110ac4a935752bd46abfad6c4695a2c11c87
       - type: git
         dest: git_repo
         url: https://github.com/imikado/dupotEasyFlatpak
-        tag: 3.23.0
-        commit: 564522b93ffe8cdb578c959c461cc6f23d52b449
+        tag: 3.23.1
+        commit: 7337df9627e47680a354b75371808cf9b31dc964
       
