@@ -10,8 +10,8 @@ finish-args:
   - --device=dri
   - --talk-name=org.freedesktop.Flatpak
   - --share=network
-  - --filesystem=home
-  
+  - --filesystem=xdg-download
+
 modules:
   - name: dupot_easy_flatpak
     buildsystem: simple
