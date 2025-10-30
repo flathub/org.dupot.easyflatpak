@@ -10,7 +10,8 @@ finish-args:
   - --device=dri
   - --talk-name=org.freedesktop.Flatpak
   - --share=network
-
+  - --filesystem=home
+  
 modules:
   - name: dupot_easy_flatpak
     buildsystem: simple
@@ -34,7 +35,7 @@ modules:
       - type: archive
         dest: EasyFlatpakArchive
         url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.25.0/bundle.tar.gz
-        sha256: cf4c65cb9fae32a7cdf901d12f88f190eb170ccc81b2620655f0bff47a9cfc4f
+        sha256: 5a40acb408d8ccaec37c2a175b0324052026c737e5eb45fa854857c1860a5519
       - type: git
         dest: git_repo
         url: https://github.com/imikado/dupotEasyFlatpak
