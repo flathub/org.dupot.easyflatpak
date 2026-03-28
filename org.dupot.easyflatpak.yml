@@ -1,7 +1,7 @@
 app-id: org.dupot.easyflatpak
-runtime: org.freedesktop.Platform
-runtime-version: "25.08"
-sdk: org.freedesktop.Sdk
+runtime: org.gnome.Platform
+runtime-version: "49"
+sdk: org.gnome.Sdk
 command: dupot_easy_flatpak
 finish-args:
   - --socket=fallback-x11
@@ -16,29 +16,27 @@ modules:
   - name: dupot_easy_flatpak
     buildsystem: simple
     build-commands:
-      - cp -R EasyFlatpakArchive/ /app/EasyFlatpak
-      - chmod +x /app/EasyFlatpak/dupot_easy_flatpak
-      - mkdir /app/bin/
-      - ln -s /app/EasyFlatpak/dupot_easy_flatpak /app/bin/dupot_easy_flatpak
-      - install -Dm644 git_repo/export/flatpak/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
-      - install -Dm644 git_repo/export/flatpak/16x16.png $FLATPAK_DEST/share/icons/hicolor/16x16/apps/org.dupot.easyflatpak.png
-      - install -Dm644 git_repo/export/flatpak/24x24.png $FLATPAK_DEST/share/icons/hicolor/24x24/apps/org.dupot.easyflatpak.png
-      - install -Dm644 git_repo/export/flatpak/32x32.png $FLATPAK_DEST/share/icons/hicolor/32x32/apps/org.dupot.easyflatpak.png
-      - install -Dm644 git_repo/export/flatpak/48x48.png $FLATPAK_DEST/share/icons/hicolor/48x48/apps/org.dupot.easyflatpak.png
-      - install -Dm644 git_repo/export/flatpak/64x64.png $FLATPAK_DEST/share/icons/hicolor/64x64/apps/org.dupot.easyflatpak.png
-      - install -Dm644 git_repo/export/flatpak/512x512.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
-      - install -Dm644 git_repo/export/flatpak/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      - mkdir /app/lib/
-      - ln -s /usr/lib/x86_64-linux-gnu/libsqlite3.so.0 /app/lib/libsqlite3.so
+      - mkdir -p /app/share/dupot_easy_flatpak
+      - cp -R src/ /app/share/dupot_easy_flatpak/
+      - mkdir -p /app/bin
+      - install -Dm755 dupot_easy_flatpak.sh /app/bin/dupot_easy_flatpak
+      - install -Dm644 export/flatpak/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
+      - install -Dm644 export/flatpak/16x16.png $FLATPAK_DEST/share/icons/hicolor/16x16/apps/org.dupot.easyflatpak.png
+      - install -Dm644 export/flatpak/24x24.png $FLATPAK_DEST/share/icons/hicolor/24x24/apps/org.dupot.easyflatpak.png
+      - install -Dm644 export/flatpak/32x32.png $FLATPAK_DEST/share/icons/hicolor/32x32/apps/org.dupot.easyflatpak.png
+      - install -Dm644 export/flatpak/48x48.png $FLATPAK_DEST/share/icons/hicolor/48x48/apps/org.dupot.easyflatpak.png
+      - install -Dm644 export/flatpak/64x64.png $FLATPAK_DEST/share/icons/hicolor/64x64/apps/org.dupot.easyflatpak.png
+      - install -Dm644 export/flatpak/512x512.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
+      - install -Dm644 export/flatpak/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
 
     sources:
-      - type: archive
-        dest: EasyFlatpakArchive
-        url: https://github.com/imikado/dupotEasyFlatpak/releases/download/3.29.5/bundle.tar.gz
-        sha256: b317413f121a4d2a72c14fce8c248a86f2feafcbb72bf1b4eb2bb9f37e9589a7
       - type: git
-        dest: git_repo
         url: https://github.com/imikado/dupotEasyFlatpak
-        tag: 3.29.5
-        commit: 105d939f0a378ed54191a001f2a43fd81f1e2e1f
+        tag: 4.0.16
+        commit: 3a7bc670d90fb834d748eb31a0f3f24e752948cf
 
+      - type: script
+        dest-filename: dupot_easy_flatpak.sh
+        commands:
+          - cd /app/share/dupot_easy_flatpak/src
+          - exec python3 main.py
