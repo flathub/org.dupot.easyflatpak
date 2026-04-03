@@ -41,3 +41,4 @@ modules:
         commands:
           - cd /app/share/dupot_easy_flatpak/src
           - exec python3 main.py
+
