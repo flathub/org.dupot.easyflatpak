@@ -28,6 +28,7 @@ modules:
       - install -Dm644 export/flatpak/64x64.png $FLATPAK_DEST/share/icons/hicolor/64x64/apps/org.dupot.easyflatpak.png
       - install -Dm644 export/flatpak/512x512.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
       - install -Dm644 export/flatpak/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 export/flatpak/${FLATPAK_ID}.xml /app/share/mime/packages/${FLATPAK_ID}.xml
 
     sources:
       - type: git
