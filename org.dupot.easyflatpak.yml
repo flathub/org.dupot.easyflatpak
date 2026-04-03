@@ -32,8 +32,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/imikado/dupotEasyFlatpak
-        tag: 4.0.28
-        commit: bfb7d505f7e22b05567e3c38eee9bd301719d370
+        tag: 4.0.29
+        commit: 5be7d1d1f5d79f4f53c228e8d2a3fb4eab20590a
 
       - type: script
         dest-filename: dupot_easy_flatpak.sh
