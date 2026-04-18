@@ -28,15 +28,18 @@ modules:
       - install -Dm644 export/flatpak/64x64.png $FLATPAK_DEST/share/icons/hicolor/64x64/apps/org.dupot.easyflatpak.png
       - install -Dm644 export/flatpak/512x512.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
       - install -Dm644 export/flatpak/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 export/flatpak/${FLATPAK_ID}.xml /app/share/mime/packages/${FLATPAK_ID}.xml
 
     sources:
       - type: git
         url: https://github.com/imikado/dupotEasyFlatpak
-        tag: 4.0.29
-        commit: 5be7d1d1f5d79f4f53c228e8d2a3fb4eab20590a
+        tag: 4.1.8
+        commit: 18e54f58eee3834cf53beaf1fc3e54ba03fb04fc
 
       - type: script
         dest-filename: dupot_easy_flatpak.sh
         commands:
           - cd /app/share/dupot_easy_flatpak/src
           - exec python3 main.py
+
+
