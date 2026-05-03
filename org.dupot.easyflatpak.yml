@@ -1,6 +1,6 @@
 app-id: org.dupot.easyflatpak
 runtime: org.gnome.Platform
-runtime-version: "49"
+runtime-version: "50"
 sdk: org.gnome.Sdk
 command: dupot_easy_flatpak
 finish-args:
